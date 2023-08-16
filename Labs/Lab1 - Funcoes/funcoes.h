@@ -91,6 +91,7 @@ switch (disciplina) {
         printf("%f", re);
         return (re);
     case 3:
+        {
         float lab1, lab2, lab3, lab4, lab5, lab6;
         wprintf(L"Digite a nota do primeiro laboratório: ");
         scanf("%f", &lab1);
@@ -131,6 +132,7 @@ switch (disciplina) {
         ret = (sqrt(flab * proj * prov));
         printf("%f", ret);
         return (ret);
+        }
     case 4:
         printf("Digite a nota do projeto: ");
         float projeto;
