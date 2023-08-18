@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 #include <locale.h>
-#include "funcoes.h"
+#include "lab.h"
+
 // locale não está funcionando, então utilizei wprintf e wscanf
 int main (){
 
