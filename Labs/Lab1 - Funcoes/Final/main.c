@@ -10,6 +10,7 @@ int main (){
     wprintf(L"2 - Distância entre dois pontos\n");
     wprintf(L"3 - Média das matérias\n");
     int exe;
+    float valor;
     scanf("%d", &exe);
     switch (exe){
         case 1:
@@ -33,7 +34,13 @@ int main (){
             wprintf(L"Distancia: %lf", distancia(c, d, e, f));
             break;
         case 3:
-            nota();
+            valor = nota();
+            wprintf(L"\nMédia: %f", valor);
+            if (valor >= 5){
+                wprintf(L"\nVocê foi aprovado");
+            } else {
+                wprintf(L"\nVocê foi reprovado");
+            }
             break;
         default:
             printf("Opção inválida\n");

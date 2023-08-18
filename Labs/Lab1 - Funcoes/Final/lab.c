@@ -38,7 +38,6 @@ switch (disciplina) {
         scanf("%f", &provafinal);
         float retur;
         retur = ((0.3 * atividades) + (0.7 * provafinal));
-        printf("%f", retur);
         return (retur);
     case 2:
         printf("Digite a nota das atividades: ");
@@ -49,7 +48,6 @@ switch (disciplina) {
         scanf("%f", &prova);
         float re;
         re = ((0.4 * atividade) + (0.6 * prova));
-        printf("%f", re);
         return (re);
     case 3:
         {
@@ -91,7 +89,6 @@ switch (disciplina) {
         scanf("%f", &prov);
         float ret;
         ret = (sqrt(flab * proj * prov));
-        printf("%f", ret);
         return (ret);
         }
     case 4:
@@ -109,7 +106,6 @@ switch (disciplina) {
         scanf("%f", &final);
         float reto;
         reto = ((0.2 * projeto) + (0.2 * lab) + (0.1 * ativ) + (0.5 * final));
-        printf("%f", reto);
         return (reto);
     case 5:
         printf("Digite a nota da primeira atividade: ");
@@ -127,7 +123,6 @@ switch (disciplina) {
         scanf("%f", &prv);
         float retor;
         retor = ((0.3 * t) + (0.7 * prv));
-        printf("%f", retor);
         return (retor);
     case 6:
         wprintf(L"Você fez o trabalho de extenção? (1 - Sim, 2 - Não) ");
@@ -151,7 +146,6 @@ switch (disciplina) {
         float M = E * 0.4 + T * 0.6;
         float retorn;
         retorn = (M * f); 
-        printf("%f", retorn);
         return (retorn);
     case 7:
         printf("Digite a nota da primeira atividade: ");
@@ -166,7 +160,6 @@ switch (disciplina) {
         scanf("%f", &pf);
         float retorno;
         retorno = ((0.3 * A) + (0.7 * pf));
-        printf("%f", retorno);
         return (retorno);
     default:
         printf("Disciplina inválida\n");
