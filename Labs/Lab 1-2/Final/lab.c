@@ -166,3 +166,48 @@ switch (disciplina) {
         return 0;
         }
 }
+
+float max_float(float x, float y){
+float max;
+if (x > y){
+    max = x;
+} else if (x < y){
+    max = y;
+} else {
+    max = 0;
+}
+return max;
+}
+float min_float(float x, float y){
+float min;
+if (x < y){
+    min = x;
+} else if (x > y){
+    min = y;
+} else {
+    min = 0;
+}
+return min;
+}
+
+int sinal(float x){
+int sin;
+if (x < 0){
+    sin = -1;
+} else if (x > 0){
+    sin = 1;
+} else if (x == 0) {
+    sin = 0;
+}
+return sin;
+}
+
+int acima_de(float valor, float limite){
+int res;
+if (valor > limite){
+    res = 1;
+} else if (valor <= limite){
+    res = 0;
+}
+return res;
+}
