@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+#include <wchar.h>
 #include "lab.h"
 
 int main (){
@@ -13,6 +14,11 @@ int main (){
     wprintf(L"5 - Qual o menor número\n");
     wprintf(L"6 - Qual o sinal\n");
     wprintf(L"7 - Está acima do limite\n");
+    wprintf(L"8 - Busca\n");
+    wprintf(L"9 - Média ponderada\n");
+    wprintf(L"10 - Tamanho\n");
+    wprintf(L"11 - Copia String\n");
+    wprintf(L"12 - Input Python\n");
     int exe;
     float valor;
     scanf("%d", &exe);
@@ -72,7 +78,6 @@ int main (){
         wprintf(L"O menor número é %f", num);
         }
         break;
-
         case 6:
         wprintf(L"Digite o número: ");
         float k;
@@ -99,7 +104,67 @@ int main (){
         wprintf(L"O valor está dentro do limite.");
         }
         break;
-        
+        case 8:
+        wprintf(L"Digite o tamanho do vetor: ");
+        int tam;
+        scanf("%d", &tam);
+        int *valores = (int *)malloc(tam * sizeof(int));
+        for (int i = 0; i < tam; i++){
+            wprintf(L"Digite o valor %d: ", i);
+            scanf("%d", &valores[i]);
+        }
+        wprintf(L"Digite o valor a ser buscado: ");
+        int valor;
+        scanf("%d", &valor);
+        int res = busca(valor, valores, tam);
+        if (res == 1){
+            wprintf(L"O valor está no vetor.");
+        } else if (res == 0){
+            wprintf(L"O valor não está no vetor.");
+        }
+        break;
+        case 9:
+        wprintf(L"Digite o tamanho do vetor: ");
+        int tamanh;
+        scanf("%d", &tamanh);
+        float *val = (float *)malloc(tam * sizeof(float));
+        //corrigir pesos
+        float *pesos = (float *)malloc(tamanh * sizeof(float));
+        for (int i = 0; i < tamanh; i++){
+            wprintf(L"Digite o valor %d: ", i);
+            scanf("%f", &val[i]);
+            wprintf(L"Digite o peso %d: ", i);
+            scanf("%f", &pesos[i]);
+        }
+        wprintf(L"Média ponderada: %f", mediaPonderada(val, pesos, tamanh));
+        break;
+        case 10:
+        wprintf(L"Digite a string: ");
+        char string[100];
+        scanf("%s", string);
+        wprintf(L"Tamanho: %d", tamanho(string));
+        break;
+        case 11:
+        wprintf(L"Digite a primeira string: ");
+        char string1[100];
+        scanf("%s", string1);
+        wprintf(L"Digite a string a ser copiada: ");
+        char string2[100];
+        scanf("%s", string2);
+        int resp = copiaString(string1, string2);
+        if (resp == 0){
+            wprintf(L"Não foi possível copiar.");
+        } else if (resp == 1){
+            wprintf(L"Cópia realizada com sucesso.");
+        }
+        break;
+        case 12: 
+        wprintf(L"Digite a string: ");
+        char inpt[100];
+        char str[100];
+        scanf("%s", str);
+        wprintf(L"%s", python(str, inpt));
+        break;
         default:
             printf("Opção inválida\n");
     }

@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
 
 float media(float x, float y){
     return (x + y) / 2;
@@ -210,4 +213,47 @@ if (valor > limite){
     res = 0;
 }
 return res;
+}
+// Uma função que busca um valor em um vetor e retorna a posição do valor ou -1 se não encontrar
+int busca(int valor, int valores[], int tamanho){
+    int res;
+    for (int i = 0; i < tamanho; i++){
+        if (valores[i] == valor){
+            res = i;
+            break;
+        } else {
+            res = -1;
+        }
+    }
+    return res;
+}
+// Uma função que calcula a média ponderada de um vetor de valores e um vetor de pesos
+float mediaPonderada(float valores[], float pesos[], int tamanho){
+    float soma = 0;
+    float somapesos = 0;
+    for (int i = 0; i < tamanho; i++){
+        soma += valores[i] * pesos[i];
+        somapesos += pesos[i];
+    }
+    return soma / somapesos;
+}
+// Uma função que retorna o tamanho de uma string
+int tamanho(char string[]){
+    int tam = strlen(string);
+    return tam;
+}
+// Uma função que copia uma string para outra e retorna 1 se as strings são iguais e 0 se são diferentes
+int copiaString(char string1[], char string2[]){
+    strcpy(string2, string1);
+    if (strcmp(string1, string2) == 0){
+        return 1;
+    } else {
+        return 0;
+    }
+}
+// uma função que funciona como a função input do Python (recebe uma string para imprimir e retorna uma string com o que foi lido do teclado)
+char* python(char string[], char inpt[]){
+    printf("%s", string);
+    scanf("%s", inpt);
+    return inpt;
 }
