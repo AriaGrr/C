@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <wchar.h>
-#include "lab.h"
+#include "funcoes.h"
 
 int main (){
     setlocale(LC_ALL, "Portuguese");

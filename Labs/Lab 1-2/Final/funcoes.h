@@ -1,4 +1,4 @@
-#include "lab.c"
+#include "funcoes.c"
 
 float media(float x, float y);
 
@@ -22,4 +22,4 @@ int tamanho(char string[]);
 
 int copiaString(char string1[], char string2[]);
 // uma função que funciona como a função input do Python (recebe uma string para imprimir e retorna uma string com o que foi lido do teclado)
-char* python(char string[], char inpt[];);
+char* python(char string[], char inpt[]);
